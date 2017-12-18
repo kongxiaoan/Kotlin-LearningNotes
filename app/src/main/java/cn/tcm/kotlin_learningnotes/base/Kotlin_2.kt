@@ -4,6 +4,12 @@ import java.lang.Integer.parseInt
 
 /**
  * Created by mr.kong on 2017/12/15.
+ * 类的定义
+ * 函数的定义
+ * if判断语句
+ * when / for / while
+ * 返回/跳转语句
+ *
  */
 class Kotlin_2 {
 	/**
@@ -112,9 +118,70 @@ class Kotlin_2 {
 
 	/**
 	 * for 循环
-	 * 首先要说明的是for循环可以对任意可以进行遍历的对象进行遍历
+	 *
 	 */
 	fun forTest() {
+		//kotlin 中for循环的写法挺多的
+		//1、for循环可以对任意可以进行遍历的对象进行遍历 这相当于C# 语言中的foreach 循环
+		val mList = ArrayList<String>()
+		for (item in mList) print(item)
+		//有循环体 并且指明类型的
+		for (item: String in mList) {
+			//循环体
+		}
+
+		//对数组类for 循环 ，通过索引遍历
+		//写法1
+		for (i in mList.indices) {
+			print(mList[i])
+		}
+		//写法2
+		for (i in 0..mList.size) {
+			print(mList[i]) //需要说明的是kotlin 中集合的get/set方法都可以写成 []
+		}
+
+		//写法3
+		for (i in 0 until mList.size) { // --> i in 0.. mList.size - 1
+
+		}
+		//还可以在区间上遍历
+		for ((index, value) in mList.withIndex()) {
+			print("$index is $value")
+		}
+		//当然还有一些常见的写法 在后面的例子中慢慢介绍
+	}
+	//while 循环
+	/**
+	 * kotlin 中是保留了while 循环的 他和Java的使用是一样的 没有做改变
+	 */
+
+	/**
+	 * kotlin 中同样支持返回和跳转 含义（功能和Java的一样）
+	 * return
+	 * break
+	 * continue
+	 * 在用法上有改动 一般when 中条件语句后面不需要想switch一样添加break
+	 */
+	fun returnAndBreak() {
+		//其他使用场景和Java一样 按照他的功能使用即可
+		val s = Kotlin_2_TestBean().name ?: return //如果这个属性是null 直接return
+
+		//break and continue
+		//在kotlin中任何的表达式都可以使用标签标记
+		/**
+		 * 标签的格式
+		 * 标识符 + @
+		 * eg:kpa@
+		 * 为什么说标签呢？ Java中也有标签 我们使用的时候一般是配合跳转功能完成达到某个条件和响应的操作
+		 */
+		kpa@ for (i in 0..10) {
+			for (j in 0..10) {
+				if (i == 3) break@kpa //当条件满足后跳出指定的循环
+			}
+		}
+		/**
+		 * 具体在后面的场景中介绍
+		 */
 
 	}
 
