@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Kotlin-LearningNotes.iml" filepath="$PROJECT_DIR$/Kotlin-LearningNotes.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin_socketdemo/kotlin_socketdemo.iml" filepath="$PROJECT_DIR$/kotlin_socketdemo/kotlin_socketdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin_utils/kotlin_utils.iml" filepath="$PROJECT_DIR$/kotlin_utils/kotlin_utils.iml" />
     </modules>
   </component>
 </project>
